@@ -1,0 +1,61 @@
+.header-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.header-banner h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.header-banner p {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-button button {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0a3a3a;
+}
+.header-banner button:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #ffcc00;
+  background-color: #0a3a3a;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInText 1s ease-in forwards 0.5s;
+}
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 768px) {
+  .header-banner {
+    padding: 30px 10px;
+  }
+
+  .header-banner h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,142 @@
+.realisation-header h1 {
+  font-size: 3rem;
+  font-family: "Roboto Slab", serif;
+  color: #0a3a3a;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+.realisation-container {
+  display: flex;
+  flex-direction: column; /* empile les projets */
+  gap: 3rem;
+}
+
+.realisation-grid {
+  display: flex;
+  flex-direction: row; /* texte à gauche, image à droite par défaut */
+  width: 100%;
+  gap: 2rem;
+  background-color: #fffefd;
+  /* align-items: center; */
+}
+.realisation-header h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0a3a3a;
+}
+.realisation h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInText 1s ease-in forwards 0.5s;
+}
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0);}
+}
+.realisation-grid.reverse {
+  flex-direction: row-reverse; /* inverse texte / image */
+}
+
+
+.grid-p, .grid-im {
+  width: 50%;
+}
+
+.grid-p {
+  color: #0a3a3a;
+  padding: 1rem;
+}
+
+.grid-im {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-im img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.projet-grand-titre {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0a3a3a;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* INTRO DEUX */
+.intro-deuxx {
+  display: flex;
+  background-color: #0a3a3a;
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 30px;
+}
+
+.intro-deuxx p {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: white;
+  flex: 1;
+  margin: 0;
+}
+strong{
+  color:#f7deb0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.intro-dd button {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0a3a3a;
+  margin-top: 10px;
+}
+.intro-dd button:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #ffcc00;
+  background-color: #f7deb0;
+}
+
+
+/* la partie responsive */
+@media (max-width: 768px) {
+  .realisation-grid,
+  .realisation-grid.reverse {
+    flex-direction: column;  /* texte au-dessus, image en dessous */
+  }
+
+  .grid-p,
+  .grid-im {
+    width: 100%;
+    flex: unset;
+  }
+
+  .grid-im img {
+    width: 100%;
+    height: auto;
+    max-height: none;        /* enlever limitation max si nécessaire */
+    min-height: 900px;       /* hauteur minimale pour que ça paraisse grand */
+    object-fit: cover;
+  }
+}

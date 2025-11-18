@@ -1,0 +1,17 @@
+.carousel-realisations {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.carousel-realisations h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: "Roboto Slab", serif;
+}
+
+.carousel-realisations img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}

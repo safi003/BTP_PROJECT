@@ -1,0 +1,157 @@
+/* === Style global === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sorts Mill Goudy", serif;
+  color: #0a3a3a;
+  background-color: #fdfdfd;
+  padding-top: 70px;
+}
+
+/* === Texte descriptif au-dessus du formulaire === */
+.postuler-intro {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-family: "Sorts Mill Goudy", serif;
+  background-color: rgba(10, 58, 58, 0.6);
+  color: #f8e00b;
+  padding: 25px 20px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.postuler-intro h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.postuler-intro p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+
+/* === Container principal du formulaire === */
+.postuler-container {
+  padding: 30px 20px 50px 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.postuler-container h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0a3a3a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === Formulaire === */
+.form-postuler {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-postuler label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0a3a3a;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+/* Champs texte, email, tel, date, select */
+.form-postuler input[type="text"],
+.form-postuler input[type="email"],
+.form-postuler input[type="tel"],
+.form-postuler input[type="date"],
+.form-postuler select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #0a3a3a;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-postuler input:focus,
+.form-postuler select:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 6px rgba(255, 204, 0, 0.5);
+}
+
+/* === Champs fichiers === */
+.form-postuler input[type="file"] {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  border: none;
+}
+
+/* === Bouton envoyer === */
+.form-postuler button {
+  padding: 12px;
+  background-color: #0a3a3a;
+  color: #f7deb0;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-postuler button:hover {
+  background-color: #ffcc00;
+  color: #1619df;
+  transform: translateY(-3px);
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .postuler-container {
+    padding: 25px 15px;
+    margin: 30px auto;
+    max-width: 90%;
+  }
+
+  .postuler-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-postuler input,
+  .form-postuler select,
+  .form-postuler button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .form-postuler input[type="file"] {
+    font-size: 0.8rem;
+  }
+
+  .postuler-intro h3 {
+    font-size: 1.5rem;
+  }
+
+  .postuler-intro p {
+    font-size: 1rem;
+  }
+}

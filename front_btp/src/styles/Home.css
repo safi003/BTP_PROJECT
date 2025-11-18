@@ -1,0 +1,18 @@
+.home {
+  font-family: "Sorts Mill Goudy", serif;
+  background-color: white;
+  color: #0a3a3a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-overview, .realisations-overview {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services-overview h2, .realisations-overview h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
